@@ -12,7 +12,7 @@ public class ExceptionHandlingAspect {
 
     @Before("com.springcourse.aop.aspects.MyPointcuts.allAddMethods()")
     public void beforeAddExceptionHandlingAdvice() {
-        System.out.println("beforeGetExceptionHandlingAdvice: ловим обрабатываем исключения" +
+        System.out.println("beforeAddExceptionHandlingAdvice: ловим обрабатываем исключения" +
                 " при попытке получить книгу/журнал.");
         System.out.println("------------------------------");
 
