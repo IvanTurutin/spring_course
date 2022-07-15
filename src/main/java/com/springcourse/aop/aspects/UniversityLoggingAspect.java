@@ -3,6 +3,7 @@ package com.springcourse.aop.aspects;
 import com.springcourse.aop.Student;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
@@ -11,10 +12,12 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeMap;
 
 @Component
 @Aspect
 public class UniversityLoggingAspect {
+/*
     @Before("execution(* get*())")
     public void beforeGetStudentsLoggingAdvice(JoinPoint joinPoint) {
         System.out.println("beforeGetStudentsLoggingAdvice: логгируем получение" +
@@ -32,6 +35,14 @@ public class UniversityLoggingAspect {
 
         System.out.println("afterReturningGetStudentsLoggingAdvice: логгируем получение" +
                 " списка студентов после выполнения метода getStudents()");
+    }
+*/
+
+    @AfterThrowing(pointcut = "execution(* getStudents())",
+    throwing = "exception")
+    public void afterTrowingGetStudentsLoggingAdvice(Throwable exception) {
+        System.out.println("afterTrowingGetStudentsLoggingAdvice: логируем" +
+                " выброс исключения " + exception);
     }
 
 }
