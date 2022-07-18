@@ -8,7 +8,12 @@ public class Test3 {
         System.out.println("Method main starts");
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MyConfig.class);
         UniLibrary uniLibrary = context.getBean("uniLibrary", UniLibrary.class);
-        String bookName = uniLibrary.returnBook();
+        String bookName = null;
+        try {
+            bookName = uniLibrary.returnBook();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
         System.out.println("Название возвращенной книги " + bookName);
 
         context.close();
