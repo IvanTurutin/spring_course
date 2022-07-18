@@ -11,11 +11,11 @@ public class UniLibrary extends AbstractLibrary {
         System.out.println("------------------------------");
     }
 
-    public void returnBook() {
+    public String returnBook() {
         System.out.println("возвращаем книгу в UniLibrary");
-        System.out.println("------------------------------");
+//        System.out.println("------------------------------");
 
-//        return "";
+        return "Буратино";
     }
 
     public String getMagazine() {
