@@ -30,20 +30,20 @@ public class NewLoggingAspect {
 
     @Around("execution(public String returnBook())")
     public Object aroundReturningBookLoggingAspect(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-        System.out.println("aroundReturningBookLoggingAspect: в библиотеку " +
-                "пытаются вернуть книгу");
+        System.out.println("aroundReturningBookLoggingAspect: в библиотеку "
+                + "пытаются вернуть книгу");
         Object targetMethodResult = null;
         try {
             targetMethodResult = proceedingJoinPoint.proceed();
 
         } catch (Exception e) {
-            System.out.println("aroundReturningBookLoggingAspect: было поймано" +
-                    " исключение: " + e);
+            System.out.println("aroundReturningBookLoggingAspect: было поймано"
+                    + " исключение: " + e);
             throw e;
         }
 
-        System.out.println("aroundReturningBookLoggingAspect: в библиотеку " +
-                "успешно вернули книгу");
+        System.out.println("aroundReturningBookLoggingAspect: в библиотеку "
+                + "успешно вернули книгу");
         return targetMethodResult;
     }
 }

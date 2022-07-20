@@ -71,14 +71,14 @@ public class LoggingAspect {
         System.out.println("methodSignature.getName() = "
                 + methodSignature.getName());
 
-        if("addBook".equals(methodSignature.getName())) {
+        if ("addBook".equals(methodSignature.getName())) {
             Object[] arguments = joinPoint.getArgs();
             for (Object o : arguments) {
                 if (o instanceof Book) {
                     Book myBook = (Book) o;
                     System.out.println(
-                            "Информация о книге: " +
-                            "название - " + myBook.getName()
+                            "Информация о книге: "
+                                    + "название - " + myBook.getName()
                             + ", автор - " + myBook.getAuthor()
                             + ", год издания - " + myBook.getYearOfPublication()
                             );
@@ -88,8 +88,8 @@ public class LoggingAspect {
             }
         }
 
-        System.out.println("beforeGetLoggingAdvice: логирование " +
-                "попытки получить книгу/журнал");
+        System.out.println("beforeGetLoggingAdvice: логирование "
+                + "попытки получить книгу/журнал");
         System.out.println("------------------------------");
 
     }
