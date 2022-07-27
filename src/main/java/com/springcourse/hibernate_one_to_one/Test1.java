@@ -1,7 +1,7 @@
-package com.springcourse.hibernatetest2;
+package com.springcourse.hibernate_one_to_one;
 
-import com.springcourse.hibernatetest2.entity.Detail;
-import com.springcourse.hibernatetest2.entity.Employee;
+import com.springcourse.hibernate_one_to_one.entity.Detail;
+import com.springcourse.hibernate_one_to_one.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
