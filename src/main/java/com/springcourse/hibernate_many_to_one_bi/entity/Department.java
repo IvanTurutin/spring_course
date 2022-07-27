@@ -22,9 +22,9 @@ public class Department {
             CascadeType.PERSIST, CascadeType.REFRESH}
             CascadeType.ALL
 */
-    @OneToMany(cascade = {CascadeType.MERGE, CascadeType.DETACH,
-            CascadeType.PERSIST, CascadeType.REFRESH},
-            mappedBy = "department")
+    @OneToMany(cascade = CascadeType.ALL,
+            mappedBy = "department",
+    fetch = FetchType.LAZY)
     private List<Employee> emps;
 
     public List<Employee> getEmps() {
