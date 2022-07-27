@@ -1,7 +1,7 @@
-package com.springcourse.hibernate_many_to_one;
+package com.springcourse.hibernate_many_to_one_bi;
 
-import com.springcourse.hibernate_many_to_one.entity.Department;
-import com.springcourse.hibernate_many_to_one.entity.Employee;
+import com.springcourse.hibernate_many_to_one_bi.entity.Department;
+import com.springcourse.hibernate_many_to_one_bi.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

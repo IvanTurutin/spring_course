@@ -1,4 +1,4 @@
-package com.springcourse.hibernate_many_to_one.entity;
+package com.springcourse.hibernate_many_to_one_uni.entity;
 
 
 import javax.persistence.*;
@@ -17,19 +17,6 @@ public class Employee {
     private String surname;
     @Column(name = "salary")
     private int salary;
-
-    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.DETACH,
-            CascadeType.PERSIST, CascadeType.REFRESH})
-    @JoinColumn(name = "departments_id")
-    private Department department;
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
-    }
 
     public Employee() {
     }

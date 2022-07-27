@@ -1,4 +1,4 @@
-package com.springcourse.hibernate_many_to_one.entity;
+package com.springcourse.hibernate_many_to_one_bi.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;
